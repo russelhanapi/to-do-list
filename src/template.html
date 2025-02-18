@@ -12,15 +12,94 @@
     <title>To Do List</title>
   </head>
   <body>
-    <p>TEST FONT FAMILY</p>
-    <span class="material-icons">pie_chart</span>
-    <!-- Filled -->
-    <span class="material-icons-outlined">pie_chart</span>
-    <!-- Outlined -->
-    <span class="material-icons-round">pie_chart</span>
-    <!-- Round -->
-    <span class="material-icons-sharp">pie_chart</span>
-    <!-- Sharp -->
-    <span class="material-icons-two-tone">pie_chart</span>
+    <aside class="sidebar">
+      <button class="btn-add-task">
+        <span class="material-icons-round btn-add-icon">add_circle</span>
+        <p class="btn-add-text">Add New Task</p>
+      </button>
+      <ul class="task-list-container">
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">dashboard</span>
+            <p class="task-group-name">All Tasks</p>
+            <p class="task-count">18</p>
+          </a>
+        </li>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">today</span>
+            <p class="task-group-name">Today</p>
+            <p class="task-count">18</p>
+          </a>
+        </li>
+
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">calendar_month</span>
+            <p class="task-group-name">Upcoming</p>
+            <p class="task-count">8</p>
+          </a>
+        </li>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">check_circle</span>
+            <p class="task-group-name">Completed</p>
+          </a>
+        </li>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">delete</span>
+            <p class="task-group-name">Trash</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="task-list-container">
+        <div class="task-list-header">
+          <h4 class="task-list-title">Projects</h4>
+          <span class="material-icons-round task-icon add-project">add</span>
+        </div>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">tag</span>
+            <p class="task-group-name">Personal</p>
+            <p class="task-count">9</p>
+          </a>
+        </li>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="material-icons-round task-icon">tag</span>
+            <p class="task-group-name">Work</p>
+            <p class="task-count">9</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="task-list-container">
+        <div class="task-list-header">
+          <h4 class="task-list-title">Priorities</h4>
+        </div>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="task-priority priority-high"></span>
+            <p class="task-group-name">High</p>
+            <p class="task-count">9</p>
+          </a>
+        </li>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="task-priority priority-medium"></span>
+            <p class="task-group-name">Medium</p>
+            <p class="task-count">9</p>
+          </a>
+        </li>
+        <li class="task-list-item">
+          <a href="#" class="task-list-item-link">
+            <span class="task-priority priority-low"></span>
+            <p class="task-group-name">Low</p>
+            <p class="task-count">0</p>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <main class="main"></main>
   </body>
 </html>
