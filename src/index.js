@@ -1,2 +1,2 @@
 import "./style.css";
-alert("Ey!")
+import "material-icons/iconfont/material-icons.css";
