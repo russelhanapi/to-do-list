@@ -22,6 +22,8 @@ body {
   grid-template-columns: 27.9rem 1fr;
 }
 
+/* NOTE: SIDEBAR */
+
 .sidebar {
   background-color: #fffffe;
   /* position: relative;
@@ -129,4 +131,99 @@ body {
 
 .priority-low {
   background-color: #b2dfdb;
+}
+
+/* NOTE: MAIN */
+.main {
+  padding: 9rem;
+  overflow-x: auto;
+  background-color: #d8eefe;
+}
+
+.tasks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  grid-auto-flow: row;
+  gap: 3.2rem;
+  align-items: start;
+  justify-content: start;
+  cursor: pointer;
+}
+
+.task-card {
+  background-color: #fffffe;
+  border-radius: 0.6rem;
+  padding: 1.8rem 1.6rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2.2rem;
+}
+
+.task-information {
+  flex-grow: 1;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.task-title {
+  grid-column: 1/-1;
+  line-height: normal;
+  font-size: 1.8rem;
+}
+
+.task-due-date {
+  font-size: 1.4rem;
+  color: #537995;
+}
+
+.task-date {
+}
+
+.task-project {
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #537995;
+}
+
+.task-action {
+  font-size: 2.6rem;
+  color: #fffffe;
+  padding: 0.4rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.task-complete {
+  background-color: #51cf66;
+  border-radius: 50%;
+}
+
+.task-delete {
+  background-color: #ff6b6b;
+  border-radius: 50%;
+}
+
+.task-priority-high {
+  border-top: 1.2rem solid #ffcdd2;
+}
+
+.task-priority-medium {
+  border-top: 1.2rem solid #ffe0b2;
+}
+
+.task-priority-low {
+  border-top: 1.2rem solid #b2dfdb;
 }
