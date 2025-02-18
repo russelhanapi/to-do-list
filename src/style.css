@@ -15,4 +15,118 @@ body {
   font-weight: 400;
   color: #094067;
   line-height: 1.5;
+
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 27.9rem 1fr;
+}
+
+.sidebar {
+  background-color: #fffffe;
+  /* position: relative;
+  z-index: 10; */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 38px, rgba(0, 0, 0, 0.22) 0px -4px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+.btn-add-task {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  color: #fffffe;
+  background-color: #ef4565;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  margin: 3.6rem 1.2rem 0rem 1.8rem;
+}
+
+.btn-add-icon {
+  font-size: 2.6rem;
+}
+
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list-item {
+  list-style: none;
+}
+
+.task-list-header {
+  padding: 0.8rem 2.4rem 0.8rem 3.2rem;
+
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.task-list-item-link,
+.task-list-item-link:visited {
+  color: inherit;
+  padding: 0.8rem 2.4rem 0.8rem 3.2rem;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.task-list-item-link:hover,
+.task-list-item-link:active {
+  background-color: #ef45640e;
+  color: #ef4565; /* Change to your desired color */
+}
+
+.task-list-item-link:hover .task-icon,
+.task-list-item-link:active .task-icon {
+  font-variation-settings: "FILL" 1; /* Makes the icon filled */
+  color: #ef4565; /* Change to your desired color */
+}
+
+.task-group-name {
+  font-size: 1.8rem;
+  flex-grow: 1;
+}
+
+.task-count {
+  font-size: 1.6;
+  min-width: 2.4rem;
+  text-align: center;
+  color: #537995;
+}
+
+.task-list-title {
+  font-size: 1.8rem;
+  flex-grow: 1;
+}
+
+.task-icon {
+  /* font-size: 2rem; */
+  /* color: #ef4565; */
+}
+
+.task-priority {
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+}
+
+.priority-high {
+  background-color: #ffcdd2;
+}
+
+.priority-medium {
+  background-color: #ffe0b2;
+}
+
+.priority-low {
+  background-color: #b2dfdb;
 }
