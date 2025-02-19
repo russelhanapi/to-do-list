@@ -177,3 +177,23 @@ const openTodoEditor = (id) => {
 
   modal.showModal();
 };
+
+// NOTE: EVENT LISTENERS
+btnAddTodo.addEventListener("click", () => {
+  modal.showModal();
+  renderProjectOptions();
+});
+btnFormCancel.addEventListener("click", exitModal);
+formModal.addEventListener("submit", handleFormSubmit);
+
+containerTodos.addEventListener("click", (e) => {
+  const btnDelete = e.target.classList.contains("btn-delete-todo");
+  const btnComplete = e.target.classList.contains("btn-complete-todo");
+  const todoCard = e.target.closest(".todo-card");
+  if (!todoCard) return;
+
+  const id = todoCard.dataset.id;
+  if (btnDelete) deleteTodo(id);
+  if (btnComplete) completeTodo(id);
+  if (!btnDelete && !btnComplete) openTodoEditor(id);
+});
