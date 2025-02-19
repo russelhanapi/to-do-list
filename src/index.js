@@ -150,3 +150,14 @@ const renderProjects = () => {
     listProjects.insertAdjacentHTML("beforeend", html);
   });
 };
+
+const renderProjectOptions = function () {
+  const projectSelect = document.querySelector(".form-todo-projects");
+  projectSelect.innerHTML = "";
+
+  // Add each project dynamically
+  projectsArr.forEach((project) => {
+    const option = `<option value="${project.title}" class="form-todo-project-option"># ${project.title}</option>`;
+    projectSelect.insertAdjacentHTML("beforeend", option);
+  });
+};
