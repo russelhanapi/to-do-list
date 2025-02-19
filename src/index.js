@@ -52,3 +52,37 @@ const createTodo = (
 });
 
 const createProject = (title, todoArr = []) => ({ title, todoArr });
+
+const handleFormSubmit = (e) => {
+  e.preventDefault();
+
+  console.log("Form Submitted!");
+
+  const title = document.querySelector(".form-todo-title").value.trim();
+  const description = document.querySelector(".form-todo-description").value.trim();
+  let dueDate = document.querySelector(".form-todo-due-date").value.trim();
+  const priority = document.querySelector(".form-todo-priority").value;
+  const project = document.querySelector(".form-todo-projects").value;
+
+  if (!dueDate) dueDate = "N/A";
+
+  if (editingTodoId) {
+    console.log("Editing a todo");
+    const todo = todoArr.find((todo) => todo.id === editingTodoId);
+    if (todo) {
+      Object.assign(todo, { title, description, dueDate, priority, project });
+    }
+    editingTodoId = null;
+  } else {
+    console.log("Creating new todo");
+    const newTodo = createTodo(Date.now().toString(), title, description, dueDate, priority, project);
+    todoArr.push(newTodo);
+    const projectArr = projectsArr.find((p) => p.title === project);
+    projectArr.todoArr.push(newTodo); // ✅ Adds todo to the correct project
+  }
+  console.log(todoArr); // Debugging: Check if todoArr updates
+  console.log(projectsArr); // Debugging: Check if projectsArr updates
+  renderTodos();
+  renderProjects();
+  exitModal();
+};
