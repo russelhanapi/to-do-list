@@ -86,3 +86,14 @@ const handleFormSubmit = (e) => {
   renderProjects();
   exitModal();
 };
+
+const deleteTodo = (id) => {
+  const todoIndex = todoArr.findIndex((todo) => todo.id === id);
+  if (todoIndex !== -1) {
+    todoArr[todoIndex].isDeleted = "true";
+    deletedTodoArr.push(todoArr[todoIndex]);
+    todoArr.splice(todoIndex, 1);
+    renderTodos();
+    renderProjects();
+  }
+};
