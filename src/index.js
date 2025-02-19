@@ -161,3 +161,19 @@ const renderProjectOptions = function () {
     projectSelect.insertAdjacentHTML("beforeend", option);
   });
 };
+
+// NOTE: EDITING TODO
+const openTodoEditor = (id) => {
+  const todo = todoArr.find((todo) => todo.id === id);
+  if (!todo) return;
+
+  editingTodoId = id;
+  document.querySelector(".modal-heading").textContent = "Edit Todo";
+  document.querySelector(".form-todo-title").value = todo.title;
+  document.querySelector(".form-todo-description").value = todo.description;
+  document.querySelector(".form-todo-due-date").value = todo.dueDate;
+  document.querySelector(".form-todo-priority").value = todo.priority;
+  document.querySelector(".form-todo-projects").value = todo.project;
+
+  modal.showModal();
+};
