@@ -135,3 +135,18 @@ const renderTodos = () => {
     containerTodos.insertAdjacentHTML("beforeend", html);
   });
 };
+
+const renderProjects = () => {
+  listProjects.innerHTML = "";
+  projectsArr.forEach((project) => {
+    const html = `<li class="todo-list-item">
+        <a href="#" class="todo-list-item-link">
+          <span class="material-symbols-outlined todo-icon">tag</span>
+          <p class="todo-group-name">${project.title}</p>
+          <p class="todo-count">${project.todoArr.length}</p>
+        </a>
+      </li>
+    `;
+    listProjects.insertAdjacentHTML("beforeend", html);
+  });
+};
