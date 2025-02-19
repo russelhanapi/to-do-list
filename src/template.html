@@ -13,178 +13,129 @@
   </head>
   <body>
     <aside class="sidebar">
-      <button class="btn-add-task">
-        <span class="material-icons-round btn-add-icon">add_circle</span>
-        <p class="btn-add-text">Add New Task</p>
+      <button class="btn-add-todo">
+        <span class="material-icons-outlined btn-add-icon">add_circle</span>
+        <p class="btn-add-text">Add New Todo</p>
       </button>
-      <ul class="task-list-container">
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">dashboard</span>
-            <p class="task-group-name">All Tasks</p>
-            <p class="task-count">18</p>
+      <ul class="todo-list-container">
+        <li class="todo-list-item">
+          <a href="#" class="todo-list-item-link">
+            <span class="material-icons-outlined todo-icon">dashboard</span>
+            <p class="todo-group-name">All Todos</p>
+            <p class="todo-count">18</p>
           </a>
         </li>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">today</span>
-            <p class="task-group-name">Today</p>
-            <p class="task-count">18</p>
+        <li class="todo-list-item">
+          <a href="#" class="todo-list-item-link">
+            <span class="material-icons-outlined todo-icon">today</span>
+            <p class="todo-group-name">Today</p>
+            <p class="todo-count">18</p>
           </a>
         </li>
 
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">calendar_month</span>
-            <p class="task-group-name">Upcoming</p>
-            <p class="task-count">8</p>
+        <li class="todo-list-item">
+          <a href="#" class="todo-list-item-link">
+            <span class="material-icons-outlined todo-icon">calendar_month</span>
+            <p class="todo-group-name">Upcoming</p>
+            <p class="todo-count">8</p>
           </a>
         </li>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">check_circle</span>
-            <p class="task-group-name">Completed</p>
+        <li class="todo-list-item">
+          <a href="#" class="todo-list-item-link">
+            <span class="material-icons-outlined todo-icon">check_circle</span>
+            <p class="todo-group-name">Completed</p>
           </a>
         </li>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">delete</span>
-            <p class="task-group-name">Trash</p>
+        <li class="todo-list-item">
+          <a href="#" class="todo-list-item-link">
+            <span class="material-icons-outlined todo-icon">delete</span>
+            <p class="todo-group-name">Trash</p>
           </a>
         </li>
       </ul>
-      <ul class="task-list-container">
-        <div class="task-list-header">
-          <h4 class="task-list-title">Projects</h4>
-          <span class="material-icons-round task-icon add-project">add</span>
+
+      <!-- NOTE: PROJECTS LIST -->
+      <div class="todo-list-container">
+        <div class="todo-list-header">
+          <h4 class="todo-list-title">Projects</h4>
+          <span class="material-icons-outlined todo-icon btn-add-project">add</span>
         </div>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">tag</span>
-            <p class="task-group-name">Personal</p>
-            <p class="task-count">9</p>
-          </a>
-        </li>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="material-icons-round task-icon">tag</span>
-            <p class="task-group-name">Work</p>
-            <p class="task-count">9</p>
-          </a>
-        </li>
-      </ul>
-      <ul class="task-list-container">
-        <div class="task-list-header">
-          <h4 class="task-list-title">Priorities</h4>
+        <ul class="todo-list todo-list-projects"></ul>
+      </div>
+
+      <!-- NOTE: PRIORITIES LIST -->
+      <div class="todo-list-container">
+        <div class="todo-list-header">
+          <h4 class="todo-list-title">Priorities</h4>
         </div>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="task-priority priority-high"></span>
-            <p class="task-group-name">High</p>
-            <p class="task-count">9</p>
-          </a>
-        </li>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="task-priority priority-medium"></span>
-            <p class="task-group-name">Medium</p>
-            <p class="task-count">9</p>
-          </a>
-        </li>
-        <li class="task-list-item">
-          <a href="#" class="task-list-item-link">
-            <span class="task-priority priority-low"></span>
-            <p class="task-group-name">Low</p>
-            <p class="task-count">0</p>
-          </a>
-        </li>
-      </ul>
+        <ul class="todo-list todo-list-priorities">
+          <li class="todo-list-item">
+            <a href="#" class="todo-list-item-link">
+              <span class="todo-priority priority-high"></span>
+              <p class="todo-group-name">High</p>
+              <p class="todo-count">9</p>
+            </a>
+          </li>
+          <li class="todo-list-item">
+            <a href="#" class="todo-list-item-link">
+              <span class="todo-priority priority-medium"></span>
+              <p class="todo-group-name">Medium</p>
+              <p class="todo-count">9</p>
+            </a>
+          </li>
+          <li class="todo-list-item">
+            <a href="#" class="todo-list-item-link">
+              <span class="todo-priority priority-low"></span>
+              <p class="todo-group-name">Low</p>
+              <p class="todo-count">0</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
     <main class="main">
-      <div class="tasks-container">
-        <div class="task-card task-priority-high">
-          <div class="task-information">
-            <p class="task-title">Remember who you were before</p>
-            <p class="task-due-date">
-              Due: <span class="task-date">10/12/2025</span>
-            </p>
-            <p class="task-project">#work</p>
-          </div>
-          <div class="task-actions">
-            <span class="material-icons-outlined task-action task-complete"
-              >check</span
-            >
-            <span class="material-icons-outlined task-action task-delete"
-              >close</span
-            >
-          </div>
-        </div>
-      </div>
+      <div class="todos-container"></div>
     </main>
-    <dialog class="modal-action-task">
-      <h2 class="modal-heading">Add New Task</h2>
+    <dialog class="modal-action-todo">
+      <h2 class="modal-heading">Add New Todo</h2>
       <form action="" class="modal-form">
         <div>
-          <label for="form-task-title">Title</label>
+          <label for="form-todo-title">Title</label>
           <input
             type="text"
-            class="form-task-title"
-            id="form-task-title"
-            name="form-task-title"
+            class="form-todo-title"
+            id="form-todo-title"
+            name="form-todo-title"
             placeholder="Update project documentation..."
             autofocus
             required
           />
         </div>
         <div>
-          <label for="form-task-description">Description</label>
+          <label for="form-todo-description">Description</label>
           <textarea
-            class="form-task-description"
-            id="form-task-description"
-            name="form-task-description"
+            class="form-todo-description"
+            id="form-todo-description"
+            name="form-todo-description"
             placeholder="Description"
             rows="4"
           ></textarea>
         </div>
         <div>
-          <label for="form-task-due-date">Due Date:</label>
-          <input
-            type="date"
-            class="form-task-due-date"
-            id="form-task-due-date"
-            name="form-task-due-date"
-          />
+          <label for="form-todo-due-date">Due Date:</label>
+          <input type="date" class="form-todo-due-date" id="form-todo-due-date" name="form-todo-due-date" />
         </div>
         <div>
-          <label for="form-task-priority">Priority:</label>
-          <select
-            class="form-task-priority"
-            id="form-task-priority"
-            name="form-task-priority"
-            required
-          >
-            <option value="high">
-              <span>High</span>
-            </option>
-            <option value="medium"><span>Medium</span></option>
-            <option value="low"><span>Low</span></option>
+          <label for="form-todo-priority">Priority:</label>
+          <select class="form-todo-priority" id="form-todo-priority" name="form-todo-priority" required>
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="low">Low</option>
           </select>
         </div>
         <div>
-          <label for="form-task-project">Project:</label>
-          <select
-            class="form-task-project"
-            id="form-task-project"
-            name="form-task-project"
-            required
-          >
-            <option value="personal">
-              #<span class="task-project">personal</span>
-            </option>
-            <option value="work">
-              #<span class="task-project">work</span>
-            </option>
-          </select>
+          <label for="form-todo-projects">Project:</label>
+          <select class="form-todo-projects" id="form-todo-projects" name="form-todo-project" required></select>
         </div>
         <div class="form-buttons-container">
           <button class="btn-form btn-form-cancel" type="button">Cancel</button>
