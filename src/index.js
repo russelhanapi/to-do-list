@@ -97,3 +97,14 @@ const deleteTodo = (id) => {
     renderProjects();
   }
 };
+
+const completeTodo = (id) => {
+  const todoIndex = todoArr.findIndex((todo) => todo.id === id);
+  if (todoIndex !== -1) {
+    todoArr[todoIndex].isCompleted = "true";
+    completedArr.push(todoArr[todoIndex]);
+    todoArr.splice(todoIndex, 1);
+    renderTodos();
+    renderProjects();
+  }
+};
