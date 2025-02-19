@@ -6,7 +6,6 @@
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
 }
 
 body {
@@ -34,7 +33,7 @@ body {
   gap: 2.6rem;
 }
 
-.btn-add-task {
+.btn-add-todo {
   display: flex;
   align-items: center;
   gap: 1.2rem;
@@ -46,23 +45,23 @@ body {
   background-color: #ef4565;
   border-radius: 0.9rem;
   cursor: pointer;
-  margin: 3.6rem 1.2rem 0rem 1.8rem;
+  margin: 3.6rem 2.4rem 0rem 1.8rem;
 }
 
 .btn-add-icon {
   font-size: 2.6rem;
 }
 
-.task-list-container {
+.todo-list {
   display: flex;
   flex-direction: column;
 }
 
-.task-list-item {
+.todo-list-item {
   list-style: none;
 }
 
-.task-list-header {
+.todo-list-header {
   padding: 0.8rem 2.4rem 0.8rem 3.2rem;
 
   display: flex;
@@ -70,8 +69,8 @@ body {
   column-gap: 1.2rem;
 }
 
-.task-list-item-link,
-.task-list-item-link:visited {
+.todo-list-item-link,
+.todo-list-item-link:visited {
   color: inherit;
   padding: 0.8rem 2.4rem 0.8rem 3.2rem;
   text-decoration: none;
@@ -81,41 +80,53 @@ body {
   column-gap: 1.2rem;
 }
 
-.task-list-item-link:hover,
-.task-list-item-link:active {
+.todo-list-item-link:hover,
+.todo-list-item-link:active {
   background-color: #ef45640e;
   color: #ef4565; /* Change to your desired color */
 }
 
-.task-list-item-link:hover .task-icon,
-.task-list-item-link:active .task-icon {
+.todo-list-item-link:hover .todo-icon,
+.todo-list-item-link:active .todo-icon {
   font-variation-settings: "FILL" 1; /* Makes the icon filled */
   color: #ef4565; /* Change to your desired color */
 }
 
-.task-group-name {
+.todo-group-name {
   font-size: 1.8rem;
   flex-grow: 1;
 }
 
-.task-count {
+.todo-count {
   font-size: 1.6;
   min-width: 2.4rem;
   text-align: center;
   color: #537995;
 }
 
-.task-list-title {
+.todo-list-title {
   font-size: 1.8rem;
   flex-grow: 1;
 }
 
-.task-icon {
+.todo-icon {
   /* font-size: 2rem; */
   /* color: #ef4565; */
 }
 
-.task-priority {
+.btn-add-project {
+  cursor: pointer;
+}
+
+.new-project-name {
+  width: 100%;
+}
+
+.new-project {
+  opacity: 1;
+}
+
+.todo-priority {
   height: 2.4rem;
   width: 2.4rem;
   border-radius: 50%;
@@ -140,7 +151,7 @@ body {
   background-color: #d8eefe;
 }
 
-.tasks-container {
+.todos-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
   grid-auto-flow: row;
@@ -150,19 +161,24 @@ body {
   cursor: pointer;
 }
 
-.task-card {
+.empty-todo-list-message {
+  display: block;
+  font-size: 1.8rem;
+  cursor: default;
+}
+
+.todo-card {
   background-color: #fffffe;
   border-radius: 0.6rem;
   padding: 1.8rem 1.6rem;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
   display: flex;
   justify-content: space-between;
   gap: 2.2rem;
 }
 
-.task-information {
+.todo-information {
   flex-grow: 1;
 
   display: grid;
@@ -171,65 +187,64 @@ body {
   gap: 0.8rem;
 }
 
-.task-title {
+.todo-title {
   grid-column: 1/-1;
   line-height: normal;
   font-size: 1.8rem;
 }
 
-.task-due-date {
+.todo-due-date {
   font-size: 1.4rem;
   color: #537995;
 }
 
-.task-date {
+.todo-date {
 }
 
-.task-project {
+.todo-project {
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #537995;
 }
 
-.task-action {
+.todo-action {
   font-size: 2.6rem;
   color: #fffffe;
   padding: 0.4rem;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-.task-actions {
+.todo-actions {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.task-complete {
+.btn-complete-todo {
   background-color: #51cf66;
   border-radius: 50%;
 }
 
-.task-delete {
+.btn-delete-todo {
   background-color: #ff6b6b;
   border-radius: 50%;
 }
 
-.task-priority-high {
+.todo-priority-high {
   border-top: 1.2rem solid #ffcdd2;
 }
 
-.task-priority-medium {
+.todo-priority-medium {
   border-top: 1.2rem solid #ffe0b2;
 }
 
-.task-priority-low {
+.todo-priority-low {
   border-top: 1.2rem solid #b2dfdb;
 }
 
-/* NOTE: DIALOG */
-.modal-action-task {
+/* NOTE: MODAL */
+.modal-action-todo {
   background-color: #fffffe;
   /* transform: translate(0, 50%); */
   width: 40rem;
@@ -243,7 +258,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.modal-add-task::backdrop {
+.modal-add-todo::backdrop {
   background-color: #09406775;
 }
 
