@@ -231,3 +231,7 @@ btnAddProject.addEventListener("click", function () {
     }
   });
 });
+
+// NOTE: INIT RENDER
+renderProjects();
+renderTodos();
