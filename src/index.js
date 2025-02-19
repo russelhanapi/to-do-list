@@ -53,6 +53,7 @@ const createTodo = (
 
 const createProject = (title, todoArr = []) => ({ title, todoArr });
 
+// NOTE: TODO MANAGEMENT
 const handleFormSubmit = (e) => {
   e.preventDefault();
 
@@ -107,4 +108,30 @@ const completeTodo = (id) => {
     renderTodos();
     renderProjects();
   }
+};
+
+// NOTE: RENDER FUNCTIONS
+const renderTodos = () => {
+  containerTodos.innerHTML = "";
+
+  if (todoArr.length === 0) {
+    containerTodos.innerHTML = `<p class="empty-todo-list-message">No todos? Must be nice. 😏</p>`;
+    return;
+  }
+
+  todoArr.forEach((todo) => {
+    const html = `
+      <div class="todo-card todo-priority-${todo.priority}" data-id=${todo.id}>
+        <div class="todo-information">
+          <p class="todo-title">${todo.title}</p>
+          <p class="todo-due-date">Due: <span class="todo-date">${todo.dueDate}</span></p>
+          <p class="todo-project">#${todo.project}</p>
+        </div>
+        <div class="todo-actions">
+          <span class="material-symbols-outlined todo-action btn-complete-todo">check</span>
+          <span class="material-symbols-outlined todo-action btn-delete-todo">close</span>
+        </div>
+      </div>`;
+    containerTodos.insertAdjacentHTML("beforeend", html);
+  });
 };
